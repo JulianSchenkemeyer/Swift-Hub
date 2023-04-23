@@ -81,20 +81,4 @@ final class SwiftRSSTests: XCTestCase {
 		XCTAssertEqual(entry.id, "TestBlog/welcome/")
 		XCTAssertEqual(entry.content, "<p>Welcome to the blog on Test Blog!</p>")
 	}
-
-	func testNetwork() async throws {
-		guard let url = URL(string: "https://www.swift.org/atom.xml") else {
-			XCTFail("url")
-			return
-		}
-		let (data, _) = try await URLSession.shared.data(from: url)
-
-//		guard let data else {
-//			XCTFail("data")
-//			return
-//		}
-
-		let rssParser = RSSParser(xmlData: data)
-		let feed = try rssParser.parse()
-	}
 }
