@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Model
 
 
 enum RSSParserErrors: String, Error {

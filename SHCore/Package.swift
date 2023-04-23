@@ -11,7 +11,7 @@ let package = Package(
 		// Products define the executables and libraries a package produces, and make them visible to other packages.
 		.library(
 			name: "SHCore",
-			targets: ["SHCore"]),
+			targets: ["SHCore", "RSSParser", "Model"]),
 	],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,8 +23,12 @@ let package = Package(
         .target(
             name: "SHCore",
             dependencies: []),
+		.target(name: "RSSParser",
+			   dependencies: ["Model"]),
+		.target(name: "Model",
+			   dependencies: []),
         .testTarget(
             name: "SHCoreTests",
-            dependencies: ["SHCore"]),
+            dependencies: ["SHCore", "RSSParser"]),
     ]
 )

@@ -9,10 +9,17 @@ import Foundation
 
 
 public struct Feed: CustomStringConvertible {
-	let title: String
-	let updated: String
-	let id: String
-	let entries: [Entry]
+	public let title: String
+	public let updated: String
+	public let id: String
+	public let entries: [Entry]
+
+	public init(title: String, updated: String, id: String, entries: [Entry]) {
+		self.title = title
+		self.updated = updated
+		self.id = id
+		self.entries = entries
+	}
 
 	public var description: String {
 		return """
