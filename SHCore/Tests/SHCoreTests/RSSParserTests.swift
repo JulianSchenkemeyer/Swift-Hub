@@ -1,7 +1,7 @@
 import XCTest
 @testable import RSSParser
 
-final class SwiftRSSTests: XCTestCase {
+final class RSSParserTests: XCTestCase {
 	var xmlSampleData: Data? { MockData.rssFeed.data(using: .utf8) }
 	var xmlSampleDataFeedWithoutContent: Data? { MockData.rssFeedWithoutContent.data(using: .utf8) }
 	var xmlSampleDataFeedWithOneEntry: Data? { MockData.rssFeedOneEntry.data(using: .utf8) }
