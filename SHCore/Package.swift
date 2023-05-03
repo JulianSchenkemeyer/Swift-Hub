@@ -31,6 +31,9 @@ let package = Package(
 				dependencies: ["Model", "RSSParser"]),
         .testTarget(
             name: "SHCoreTests",
-            dependencies: ["SHCore", "RSSParser", "Network"]),
+            dependencies: ["SHCore", "RSSParser", "Network", "Model"],
+			resources: [
+				.copy("MockProposals.json")]
+			)
     ]
 )

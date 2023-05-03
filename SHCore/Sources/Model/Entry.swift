@@ -8,7 +8,7 @@
 import Foundation
 
 
-public struct Entry: CustomStringConvertible {
+public struct Entry: CustomStringConvertible, Equatable {
 	public let title: String
 	public let link: String
 	public let updated: String

@@ -1,0 +1,21 @@
+[
+	{
+		"id": "1",
+		"authors": [{
+			"link": "",
+			"name": "Tester"
+		}],
+		"link": "",
+		"reviewManager": {
+			"link": "",
+			"name": "Chuck"
+		},
+		"sha": "123",
+		"status": {
+			"state": "In Review",
+			"version": "1"
+		},
+		"summary": "This is a test proposal",
+		"title": "Test Proposal"
+	}
+]

@@ -8,7 +8,8 @@
 import Foundation
 
 
-public struct Feed: CustomStringConvertible {
+public struct Feed: CustomStringConvertible, Equatable {
+
 	public let title: String
 	public let updated: String
 	public let id: String

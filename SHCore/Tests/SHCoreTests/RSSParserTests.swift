@@ -81,4 +81,19 @@ final class RSSParserTests: XCTestCase {
 		XCTAssertEqual(entry.id, "TestBlog/welcome/")
 		XCTAssertEqual(entry.content, "<p>Welcome to the blog on Test Blog!</p>")
 	}
+
+	func testParsingInvalidXMLFeed() throws {
+
+		guard let invalidData = "invalid xml".data(using: .utf8) else {
+			XCTFail("Could not create invalid test data")
+			return
+		}
+		let rssParser = RSSParser(xmlData: invalidData)
+		do {
+			_ = try rssParser.parse()
+			XCTFail("Invalid xml could be parsed")
+		} catch {
+			XCTAssertNotNil(error)
+		}
+	}
 }
