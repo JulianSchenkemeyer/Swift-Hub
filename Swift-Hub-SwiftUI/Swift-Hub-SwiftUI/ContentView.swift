@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+
+
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+
+			TabView {
+				BlogView()
+					.tabItem {
+						Label("Blog", systemImage: "swift")
+					}
+					.tag(0)
+				Text("Proposals")
+					.tabItem {
+						Label("Proposals", systemImage: "text.bubble.fill")
+					}
+					.tag(1)
+			}
     }
 }
 
