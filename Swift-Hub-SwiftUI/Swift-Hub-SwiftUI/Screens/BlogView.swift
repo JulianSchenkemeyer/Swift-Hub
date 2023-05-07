@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct BlogView: View {
-	let items: [demoType] = []
+	let fetchService = FetchBlogEntriesService()
+	@State var items: [BlogEntry] = []
 
     var body: some View {
 		NavigationStack {
-			ListView<demoType>(items: items)
+			BlogEntryListView(items: items)
+				.navigationTitle("Latest")
+		}
+		.task {
+			self.items = await fetchService.fetch()
 		}
     }
 }

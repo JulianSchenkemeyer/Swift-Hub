@@ -15,14 +15,21 @@ struct BlogContentView: View {
 	var content: String
 	var link: String
 
+	init(_ data: BlogEntry) {
+		self.title = data.title
+		self.published = data.formattedDate
+		self.link = data.link
+		self.content = data.content
+	}
+
     var body: some View {
 		VStack(alignment: .leading) {
-			Text("Title")
+			Text(title)
 				.font(.title)
 				.fontWeight(.bold)
 				.foregroundColor(.primary)
 
-			Text("Published at 04. Mai 2023")
+			Text("Published at \(published)")
 				.font(.callout)
 				.fontWeight(.semibold)
 				.foregroundColor(.secondary)
@@ -56,17 +63,17 @@ struct BlogContentView: View {
     }
 }
 
-struct BlogContentView_Previews: PreviewProvider {
-	static var title = "Title #1"
-	static var published = "04. Mai 2023"
-	static var content = """
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-"""
-
-    static var previews: some View {
-		BlogContentView(title: title,
-						published: published,
-						content: content,
-						link: "")
-    }
-}
+//struct BlogContentView_Previews: PreviewProvider {
+//	static var title = "Title #1"
+//	static var published = "04. Mai 2023"
+//	static var content = """
+//Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+//"""
+//
+//    static var previews: some View {
+//		BlogContentView(title: title,
+//						published: published,
+//						content: content,
+//						link: "")
+//    }
+//}
