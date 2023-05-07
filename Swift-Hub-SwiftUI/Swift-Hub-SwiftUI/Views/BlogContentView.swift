@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SafariServices
 
 struct BlogContentView: View {
 
@@ -40,26 +39,11 @@ struct BlogContentView: View {
 
 			Spacer(minLength: 20)
 
-			ScrollView {
-				VStack {
-					Text(content)
-						.font(.body)
-
-					Spacer(minLength: 80)
-
-					Button {
-						print("open in Safari")
-					} label: {
-						Label("Open in Safari", systemImage: "safari")
-							.padding(10)
-					}
-					.buttonStyle(.borderedProminent)
-				}
-			}
-
+			HTMLView(htmlContent: content)
 
 		}
 		.padding()
+		.navigationBarTitleDisplayMode(.inline)
     }
 }
 

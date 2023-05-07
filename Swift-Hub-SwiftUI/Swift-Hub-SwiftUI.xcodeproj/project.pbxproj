@@ -18,6 +18,7 @@
 		B9FD67402A06AFE600F3B303 /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD673F2A06AFE600F3B303 /* BlogView.swift */; };
 		B9FD67432A07D1E900F3B303 /* BlogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD67422A07D1E900F3B303 /* BlogEntry.swift */; };
 		B9FD67462A07D4DB00F3B303 /* FetchBlogEntriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD67452A07D4DB00F3B303 /* FetchBlogEntriesService.swift */; };
+		B9FD674A2A07F2BC00F3B303 /* HTMLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD67492A07F2BC00F3B303 /* HTMLView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B9FD673F2A06AFE600F3B303 /* BlogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
 		B9FD67422A07D1E900F3B303 /* BlogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogEntry.swift; sourceTree = "<group>"; };
 		B9FD67452A07D4DB00F3B303 /* FetchBlogEntriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBlogEntriesService.swift; sourceTree = "<group>"; };
+		B9FD67492A07F2BC00F3B303 /* HTMLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				B9FC217B2A02F0FE00590B9A /* ListEntryView.swift */,
 				B9FC217D2A02F37900590B9A /* BlogEntryListView.swift */,
 				B9FC217F2A037DE900590B9A /* BlogContentView.swift */,
+				B9FD67492A07F2BC00F3B303 /* HTMLView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				B9FC21672A022FC500590B9A /* Swift_Hub_SwiftUIApp.swift in Sources */,
 				B9FC217C2A02F0FE00590B9A /* ListEntryView.swift in Sources */,
 				B9FD67402A06AFE600F3B303 /* BlogView.swift in Sources */,
+				B9FD674A2A07F2BC00F3B303 /* HTMLView.swift in Sources */,
 				B9FC21802A037DE900590B9A /* BlogContentView.swift in Sources */,
 				B9FD67432A07D1E900F3B303 /* BlogEntry.swift in Sources */,
 			);
